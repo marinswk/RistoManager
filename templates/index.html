@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hello, here is a list of all available restaurants</h1>
+    {% for restaurant in restaurants %}
+        <div>Restaurant Name: <b>{{ restaurant.name }}</b></div>
+        <div>Restaurant Address: <b>{{ restaurant.address }}</b></div>
+        <div>Restaurant Opening Hours: <b>{{ restaurant.opening_hours }}</b></div>
+        <div>Restaurant Style: <b>{{ restaurant.style }}</b></div>
+        <div>Restaurant menu: <b>{{ restaurant.menu }}</b></div>
+        <div>Owner <b>{{ restaurant.author.username }}</b></div>
+        <hr>
+    {% endfor %}
+{% endblock %}
